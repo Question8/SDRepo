@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NASA Hunch">
+<meta name="author" content="Daniel Logan">
+<title>NASA</title>
+
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getUTCHours();
+    var m = today.getUTCMinutes();
+    var s = today.getUTCSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+</head>
+<body onload="startTime()">
+<header>
+<div id="header"><img src="resources/NASA_Worm_logo.png" alt="Nasa logo"></div>
+<div id="txt"></div>
+</header>
+<nav>
+</nav>
+<section>
+<div class="sidenav">
+<a href="#">Alerts</a>
+<button class="dropdown-btn">Timeline
+    <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    <a class= "ind" href="#">Comm/Latency</a>
+    <a class= "ind" href="#">DAY/NIGHT</a>
+    <a class= "ind" href="#">Earth Receive</a>
+	<a class= "ind" href="#">Earth Transmit</a>
+	<a class= "ind" href="#">Mars Transmit and Receive</a>
+	<a class= "ind" href="#">CDR</a>
+	<a class= "ind" href="#">FE-1</a>
+	<a class= "ind" href="#">FE-2</a>
+	<a class= "ind" href="#">FE-3</a>
+	<a class= "ind" href="#">TECH-1</a>
+	<a class= "ind" href="#">TECH-2</a>
+	<a class= "ind" href="#">MCC COORD</a>
+	<a class= "ind" href="#">ST COORD</a>
+	<a class= "ind" href="#">Comm Exceptions</a>
+</div>
+<!-- <a href="#">Messages</a> -->
+</div>
+<div id="main">
+Test
+</div>
+<script id='eventTemp' type='text/x-handlebars-template'>
+	
+	{{#each activities}}
+		<div class = "event" style = 'background: #{{customColor}}'>
+		<h3>{{id}} : {{name}} : {{@index}}</h3>
+		<h3>Start: {{start}} || End: {{end}}</h3>
+		<h3>{{{executionNote}}}</h3>
+		<h3>{{sequence}}</h3>
+		<h3>{{{opsNote}}}</h3>
+		<h3>isTask: {{isTask}}, timeCritical: {{timeCritical}}, editable: {{editable}}, flexible: {{flexible}}, {{#if unscheduled}} unscheduled: {{unscheduled}} {{/if}}</h3>
+		<p> Rows </p>
+		<ol>
+		{{#each rows}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		
+		{{#if requiredConditions}}
+		<p>Required Conditions</p>
+		<ol>
+		{{#each requiredConditions}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if procedures}}
+		<p>Procedures</p>
+		<ol>
+		{{#each procedures}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if groups}}
+		<p>Groups</p>
+		<ol>
+		{{#each groups}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if timeOfDayConstraints}}
+		<h3>Time Constraints</h3>
+		{{#if timeOfDayConstraints.noStartBefore}}
+		<p>Start after:{{timeOfDayConstraints.noStartBefore}}</p>
+		{{/if}}
+		{{#if timeOfDayConstraints.endBy}}
+		<p>End by:{{timeOfDayConstraints.endBy}}</p>
+		{{/if}}
+		{{/if}}
+		
+		</div>
+		<hr>
+	{{/each}}
+	
+  </script>
+  
+  <script src="js/handlebars-v4.0.12.js"></script>
+  <script src="js/timeline.js"></script>
+</section>
+<footer>
+<p>&copy 2018 SPACE DUCKS, NASA HUNCH</p>
+</footer>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,401 @@
+@charset "utf-8";
+
+html {
+	background-color: lightblue;
+}
+
+header {
+	background-color: lightblue;
+	#border-bottom: 2px solid black;
+	position: absolute;
+	height: 10%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+}
+
+#txt {
+	position: relative;
+	font-size: 250%;
+	text-align: right;
+	z-index: 2;
+}
+
+#header img {
+	padding-top: .7%; 
+	width: 15%;
+	height: 75%;
+}
+
+#main {
+	background-color: beige;
+	position: absolute;
+	height: 79.2%;
+	bottom: 10.5%;
+	right: 0;
+	left: 25%;
+	width: -100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.sidenav {
+  background-color: gray;
+  #border-right: 2px solid black;
+  position: absolute;
+  height: 79.2%;
+  bottom: 10.5%;
+  width: 25%;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  border-style: initial;
+  font-family: "Times New Roman", Times, serif;
+  padding: 1.8% 2.1% 1.8% 5%;
+  text-decoration: none;
+  font-size: 120%;
+  color: black;
+  display: block;
+  border-bottom: 2px solid black;
+  background-color: white;
+  width: 92.8%;
+  text-align: left;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.dropdown-btn {
+  border-style: initial;
+  font-family: "Times New Roman", Times, serif;
+  padding: 1.8% 2.1% 1.8% 5%;
+  text-decoration: none;
+  font-size: 120%;
+  color: black;
+  display: block;
+  border-bottom: 2px solid black;
+  background-color: white;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.sidenav a.ind {
+  background-color: lightgray;
+  padding-left: 10%;
+  font-size: 110%;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: red;
+}
+
+.active {
+  background-color: white;
+  color: black;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: lightblue;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 2%;
+}
+
+/*
+#sidenav {
+	background: lightblue;
+	border-right: 2px solid black;
+	position: absolute;
+	height: 39.2em;
+	left: 0;
+	bottom: 2.1cm;
+	width: 25%;
+}
+
+#sidenav a {
+	display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+ul > li {
+	text-align: center;
+    border-bottom: 1px solid black;
+}
+
+ul > li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul > li a:hover:not(.active) {
+    background-color: lightgray;
+	font-size: 30px;
+    color: white;
+}
+*/
+
+footer {
+	background-color: lightblue;
+	#border-top: 2px solid black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+	#height: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+footer > p {
+	font-size: 155%;
+}
+
+/*
+@media only screen and (device-width: 768px) {
+
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+
+#header {
+	#background-color: lightblue;
+	border-bottom: 4px solid black;
+	position: absolute;
+	height: 10%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+}
+
+#header img {
+	padding-top: .7%; 
+	width: 15%;
+	height: 50%;
+}
+
+#main {
+	background-color: beige;
+	position: absolute;
+	height: 84%;
+	bottom: 5.7%;
+	right: 0;
+	left: 25.17%;
+	width: -100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.sidenav {
+  background-color: lightblue;
+  border-right: 4px solid black;
+  position: absolute;
+  height: 84%;
+  bottom: 5.8%;
+  width: 24.8%;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  border-style: initial;
+  font-family: "Times New Roman", Times, serif;
+  padding: 25% 2.1% 25% 5%;
+  text-decoration: none;
+  font-size: 200%;
+  color: black;
+  display: block;
+  border-bottom: 4px solid black;
+  background-color: white;
+  width: 92.8%;
+  text-align: left;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.dropdown-btn {
+  border-style: initial;
+  font-family: "Times New Roman", Times, serif;
+  padding: 25% 2.1% 25% 5%;
+  text-decoration: none;
+  font-size: 200%;
+  color: black;
+  display: block;
+  border-bottom: 4px solid black;
+  background-color: white;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.sidenav a.ind {
+  background-color: lightgray;
+  padding-left: 10%;
+  font-size: 150%;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: red;
+}
+
+.active {
+  background-color: white;
+  color: black;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: lightblue;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 2%;
+}
+
+footer {
+	background-color: lightblue;
+	border-top: 4px solid black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer > p {
+	font-size: 155%;
+}
+}
+
+@media only screen and (min-device-height: 481px) and (max-device-height: 1024px) and (orientation:landscape) {
+#header {
+	#background-color: lightblue;
+	border-bottom: 4px solid black;
+	position: absolute;
+	height: 10%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+}
+
+#header img {
+	padding-top: .7%; 
+	width: 15%;
+	height: 50%;
+}
+
+#main {
+	background-color: beige;
+	position: absolute;
+	height: 84%;
+	bottom: 5.7%;
+	right: 0;
+	left: 25.17%;
+	width: -100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.sidenav {
+  background-color: lightblue;
+  border-right: 4px solid black;
+  position: absolute;
+  height: 84%;
+  bottom: 5.8%;
+  width: 24.8%;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  border-style: initial;
+  font-family: "Times New Roman", Times, serif;
+  padding: 25% 2.1% 25% 5%;
+  text-decoration: none;
+  font-size: 200%;
+  color: black;
+  display: block;
+  border-bottom: 4px solid black;
+  background-color: white;
+  width: 92.8%;
+  text-align: left;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.dropdown-btn {
+  border-style: initial;
+  font-family: "Times New Roman", Times, serif;
+  padding: 25% 2.1% 25% 5%;
+  text-decoration: none;
+  font-size: 200%;
+  color: black;
+  display: block;
+  border-bottom: 4px solid black;
+  background-color: white;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.sidenav a.ind {
+  background-color: lightgray;
+  padding-left: 10%;
+  font-size: 150%;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: red;
+}
+
+.active {
+  background-color: white;
+  color: black;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: lightblue;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 2%;
+}
+
+footer {
+	background-color: lightblue;
+	border-top: 4px solid black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer > p {
+	font-size: 155%;
+}
+}

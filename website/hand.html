@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Handlebars Tutorial</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+  <h1>Handlebars Tutorial</h1>
+  <button id="btn">Load new Event</button>
+  <!--div id='test'></div-->
+  <div id='infoHere'></div>
+  <div id='eventsHere'><h1>hello</h1></div>
+
+  <script id='headerTemp' type='text/x-handlebars-template'>
+  <select>
+  <option selected>All</option>
+  {{#each rows}}
+  <option id='choice'>{{this.name}}</option>
+  {{/each}}
+  </select>
+  	<h1>{{name}}</h1>  
+	<h2> starts: {{start}}, ends: {{end}}</h2></br></br>
+  </script>
+  <!-- for button control -->
+  <script id='eventsTemp' type='text/x-handlebars-template'>
+	<div class = "event" style = 'background: #{{customColor}}'>
+		<h3>{{id}} : {{name}}</h3>
+		<h3>Start: {{start}} || End: {{end}}</h3>
+		<h3>{{{executionNote}}}</h3>
+		<h3>{{sequence}}</h3>
+		<h3>{{opsNote}}</h3>
+		<h3>isTask: {{isTask}}, timeCritical: {{timeCritical}}, editable: {{editable}}, flexible: {{flexible}}</h3>
+		<p> Rows </p>
+		<ol>
+		{{#each rows}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		
+		{{#if requiredConditions}}
+		<p>Required Conditions</p>
+		<ol>
+		{{#each requiredConditions}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if procedures}}
+		<p>Procedures</p>
+		<ol>
+		{{#each procedures}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if groups}}
+		<p>Groups</p>
+		<ol>
+		{{#each groups}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		</div>
+  </script>
+  
+  <!--For all at once -->
+  <script id='eventTemp' type='text/x-handlebars-template'>
+	
+	{{#each activities}}
+		<div class = "event" style = 'background: #{{customColor}}'>
+		<h3>{{id}} : {{name}} : {{@index}}</h3>
+		<h3>Start: {{start}} || End: {{end}}</h3>
+		<h3>{{{executionNote}}}</h3>
+		<h3>{{sequence}}</h3>
+		<h3>{{{opsNote}}}</h3>
+		<h3>isTask: {{isTask}}, timeCritical: {{timeCritical}}, editable: {{editable}}, flexible: {{flexible}}, {{#if unscheduled}} unscheduled: {{unscheduled}} {{/if}}</h3>
+		<p> Rows </p>
+		<ol>
+		{{#each rows}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		
+		{{#if requiredConditions}}
+		<p>Required Conditions</p>
+		<ol>
+		{{#each requiredConditions}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if procedures}}
+		<p>Procedures</p>
+		<ol>
+		{{#each procedures}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if groups}}
+		<p>Groups</p>
+		<ol>
+		{{#each groups}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if timeOfDayConstraints}}
+		<h3>Time Constraints</h3>
+		{{#if timeOfDayConstraints.noStartBefore}}
+		<p>Start after:{{timeOfDayConstraints.noStartBefore}}</p>
+		{{/if}}
+		{{#if timeOfDayConstraints.endBy}}
+		<p>End by:{{timeOfDayConstraints.endBy}}</p>
+		{{/if}}
+		{{/if}}
+		
+		</div>
+		<hr>
+	{{/each}}
+	
+  </script>
+  
+  <script src="js/handlebars-v4.0.12.js"></script>
+  <script src="js/timeline.js"></script>
+</body>
+</html>
