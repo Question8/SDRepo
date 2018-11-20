@@ -9,6 +9,27 @@
 
 <link href="css/index.css" rel="stylesheet" type="text/css" />
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".dropdown-container").hide();
+		$(".dropdown-containerFE").hide();
+		$(".dropdown-containerTE").hide();
+		$(".dropdown-containerCO").hide();
+		$(".dropdown-btn").click(function(){
+			$(".dropdown-container").slideToggle("slow");
+		});
+		$(".dropdown-btnFE").click(function(){
+			$(".dropdown-containerFE").slideToggle("slow");
+		});
+		$(".dropdown-btnTE").click(function(){
+			$(".dropdown-containerTE").slideToggle("slow");
+		});
+		$(".dropdown-btnCO").click(function(){
+			$(".dropdown-containerCO").slideToggle("slow");
+		});
+	});
+</script>
 <script>
 function startTime() {
     var today = new Date();
@@ -48,14 +69,29 @@ function checkTime(i) {
 	<a class= "ind" href="#">Earth Transmit</a>
 	<a class= "ind" href="#">Mars Transmit and Receive</a>
 	<a class= "ind" href="#">CDR</a>
-	<a class= "ind" href="#">FE-1</a>
-	<a class= "ind" href="#">FE-2</a>
-	<a class= "ind" href="#">FE-3</a>
-	<a class= "ind" href="#">TECH-1</a>
-	<a class= "ind" href="#">TECH-2</a>
-	<a class= "ind" href="#">MCC COORD</a>
-	<a class= "ind" href="#">ST COORD</a>
 	<a class= "ind" href="#">Comm Exceptions</a>
+	<button class="dropdown-btnFE">FE
+		<i class="fa fa-caret-down"></i>
+	</button>
+	<div class="dropdown-containerFE">
+		<a class= "ind" href="#">FE-1</a>
+		<a class= "ind" href="#">FE-2</a>
+		<a class= "ind" href="#">FE-3</a>
+	</div>
+	<button class="dropdown-btnTE">TECH
+		<i class="fa fa-caret-down"></i>
+	</button>
+	<div class="dropdown-containerTE">
+		<a class= "ind" href="#">TECH-1</a>
+		<a class= "ind" href="#">TECH-2</a>
+	</div>
+	<button class="dropdown-btnCO">COORD
+		<i class="fa fa-caret-down"></i>
+	</button>
+	<div class="dropdown-containerCO">
+		<a class= "ind" href="#">MCC COORD</a>
+		<a class= "ind" href="#">ST COORD</a>
+	</div>
 </div>
 <!-- <a href="#">Messages</a> -->
 </div>
@@ -128,24 +164,5 @@ Test
   <script src="js/handlebars-v4.0.12.js"></script>
   <script src="js/timeline.js"></script>
 </section>
-
-<script>
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-</script>
-
 </body>
 </html>

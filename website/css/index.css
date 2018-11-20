@@ -42,6 +42,10 @@ header {
 	overflow-x: hidden;
 }
 
+#second {
+	display: none;
+}
+
 .sidenav {
   background-color: gray;
   border-right: 2px solid black;
@@ -70,7 +74,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 1.8% 2.1% 1.8% 5%;
@@ -78,7 +82,7 @@ header {
   font-size: 120%;
   color: black;
   display: block;
-  #border-bottom: 2px solid black;
+  border-bottom: 2px solid black;
   background-color: white;
   width: 100%;
   text-align: left;
@@ -92,7 +96,7 @@ header {
   font-size: 110%;
 }
 
-.sidenav a:hover, .dropdown-btn:hover {
+.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
   color: red;
 }
 
@@ -101,8 +105,7 @@ header {
   color: black;
 }
 
-.dropdown-container {
-  display: none;
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
   background-color: lightblue;
 }
 
