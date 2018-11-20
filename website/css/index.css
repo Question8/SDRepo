@@ -16,17 +16,7 @@ header {
 }
 
 #txt {
-	position: absolute;
-	font-size: 250%;
-	right: 1%;
-	bottom: 24%;
-	z-index: 3;
-}
-
-#header img {
-	padding-top: .7%; 
-	width: 15%;
-	height: 75%;
+	font-size: 50px;
 }
 
 #main {
