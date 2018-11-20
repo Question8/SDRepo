@@ -39,7 +39,7 @@ function startTime() {
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('txt').innerHTML =
-    h + ":" + m + ":" + s;
+    h + ":" + m + ":" + s + " UTC";
     var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {
@@ -51,7 +51,6 @@ function checkTime(i) {
 </head>
 <body onload="startTime()">
 <header>
-<div id="header"><img src="resources/NASA_Worm_logo.png" alt="Nasa logo"></div>
 <div id="txt"></div>
 </header>
 <nav>
@@ -96,7 +95,6 @@ function checkTime(i) {
 <!-- <a href="#">Messages</a> -->
 </div>
 <div id="main">
-Test
 </div>
 <div id="footer">
 <p>&copy 2018 SPACE DUCKS, NASA HUNCH</p>
