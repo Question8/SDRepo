@@ -5,6 +5,17 @@
 html {
 }
 
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 50px;
+	z-index: 1;
+	border: 2px black solid;
+}
+
 header {
 	background-color: #B2B2B2;
 	position: absolute;
@@ -52,7 +63,7 @@ header {
   z-index: 1;
 }
 
-.sidenav a {
+.sidenav button, .sidenav a {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 1.8% 2.1% 1.8% 5%;
@@ -84,13 +95,13 @@ header {
   outline-style: none;
 }
 
-.sidenav a.ind {
+.sidenav button.ind {
   background-color: lightgray;
   padding-left: 10%;
   font-size: 110%;
 }
 
-.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
   color: red;
 }
 
@@ -121,6 +132,11 @@ header {
 #footer > p {
 	font-size: 155%;
 }
+
+.front {
+	position: relative;
+	z-index: 4;
+}
 }
 
 /*Ipad pro portrait*/
@@ -135,6 +151,17 @@ header {
 	width: 100%;
 	text-align: center;
 	z-index: 2;
+}
+
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 50px;
+	z-index: 1;
+	border: 2px black solid;
 }
 
 #txt {
@@ -176,7 +203,7 @@ header {
   z-index: 1;
 }
 
-.sidenav a {
+.sidenav button, .sidenav a {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -208,14 +235,14 @@ header {
   outline-style: none;
 }
 
-.sidenav a.ind {
+.sidenav button.ind {
   background-color: lightgray;
   #padding-left: 10%;
   font-size: 150%;
   text-align: left;
 }
 
-.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
   color: red;
 }
 
@@ -249,6 +276,12 @@ header {
 	#line-height: 250%;
 	font-size: 45px;
 }
+
+.front {
+	position: relative;
+	z-index: 4;
+}
+
 	
 }
 
@@ -264,6 +297,17 @@ header {
 	width: 100%;
 	text-align: center;
 	z-index: 2;
+}
+
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 50px;
+	z-index: 1;
+	border: 2px black solid;
 }
 
 #txt {
@@ -305,7 +349,7 @@ header {
   z-index: 1;
 }
 
-.sidenav a {
+.sidenav button, .sidenav a {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -337,14 +381,14 @@ header {
   outline-style: none;
 }
 
-.sidenav a.ind {
+.sidenav button.ind {
   background-color: lightgray;
   #padding-left: 10%;
   font-size: 150%;
   text-align: left;
 }
 
-.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
   color: red;
 }
 
@@ -379,6 +423,11 @@ header {
 	font-size: 45px;
 }
 
+.front {
+	position: relative;
+	z-index: 4;
+}
+
 }
 
 /*Ipad portrait*/
@@ -393,6 +442,18 @@ header {
 	width: 100%;
 	text-align: center;
 	z-index: 2;
+}
+
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 10px;
+	top: 5px;
+	z-index: 1;
+	border: 2px black solid;
 }
 
 #txt {
@@ -434,7 +495,7 @@ header {
   z-index: 1;
 }
 
-.sidenav a {
+.sidenav button, .sidenav a {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -466,14 +527,14 @@ header {
   outline-style: none;
 }
 
-.sidenav a.ind {
+.sidenav button.ind {
   background-color: lightgray;
   #padding-left: 10%;
   font-size: 150%;
   text-align: left;
 }
 
-.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
   color: red;
 }
 
@@ -507,6 +568,11 @@ header {
 	#line-height: 250%;
 	font-size: 35px;
 }
+
+.front {
+	position: relative;
+	z-index: 4;
+}
 	
 }
 
@@ -522,6 +588,18 @@ header {
 	width: 100%;
 	text-align: center;
 	z-index: 2;
+}
+
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 50px;
+	top: 5px;
+	z-index: 1;
+	border: 2px black solid;
 }
 
 #txt {
@@ -563,7 +641,7 @@ header {
   z-index: 1;
 }
 
-.sidenav a {
+.sidenav button, .sidenav a {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -595,14 +673,14 @@ header {
   outline-style: none;
 }
 
-.sidenav a.ind {
+.sidenav button.ind {
   background-color: lightgray;
   #padding-left: 10%;
   font-size: 150%;
   text-align: left;
 }
 
-.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
   color: red;
 }
 
@@ -635,6 +713,11 @@ header {
 	width: 100%;
 	line-height: 10%;
 	font-size: 35px;
+}
+
+.front {
+	position: relative;
+	z-index: 4;
 }
 
 }
