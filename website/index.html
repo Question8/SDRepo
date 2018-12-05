@@ -13,20 +13,8 @@
 <script>
 	$(document).ready(function(){
 		$(".dropdown-container").hide();
-		$(".dropdown-containerFE").hide();
-		$(".dropdown-containerTE").hide();
-		$(".dropdown-containerCO").hide();
 		$(".dropdown-btn").click(function(){
 			$(".dropdown-container").slideToggle("slow");
-		});
-		$(".dropdown-btnFE").click(function(){
-			$(".dropdown-containerFE").slideToggle("slow");
-		});
-		$(".dropdown-btnTE").click(function(){
-			$(".dropdown-containerTE").slideToggle("slow");
-		});
-		$(".dropdown-btnCO").click(function(){
-			$(".dropdown-containerCO").slideToggle("slow");
 		});
 	});
 </script>
@@ -58,39 +46,33 @@ function checkTime(i) {
 <section>
 <div class="sidenav">
 <a href="#">Alerts</a>
-<button class="dropdown-btn">Timeline
-    <i class="fa fa-caret-down"></i>
-</button>
-<div class="dropdown-container">
-    <a class= "ind" href="#">Comm/Latency</a>
-    <a class= "ind" href="#">DAY/NIGHT</a>
-    <a class= "ind" href="#">Earth Receive</a>
-	<a class= "ind" href="#">Earth Transmit</a>
-	<a class= "ind" href="#">Mars Transmit and Receive</a>
-	<a class= "ind" href="#">CDR</a>
-	<a class= "ind" href="#">Comm Exceptions</a>
-	<button class="dropdown-btnFE">FE
+<button class="dropdown-btnFE">FE
 		<i class="fa fa-caret-down"></i>
 	</button>
-	<div class="dropdown-containerFE">
-		<a class= "ind" href="#">FE-1</a>
-		<a class= "ind" href="#">FE-2</a>
-		<a class= "ind" href="#">FE-3</a>
-	</div>
+		<button class= "ind" id="FE1" >FE-1</button>
+		<button class= "ind" id="FE2">FE-2</button>
+		<button class= "ind" id="FE3">FE-3</button>
 	<button class="dropdown-btnTE">TECH
 		<i class="fa fa-caret-down"></i>
 	</button>
-	<div class="dropdown-containerTE">
-		<a class= "ind" href="#">TECH-1</a>
-		<a class= "ind" href="#">TECH-2</a>
-	</div>
+		<button class= "ind" id="TECH1">TECH-1</button>
+		<button class= "ind" id="TECH2">TECH-2</button>
 	<button class="dropdown-btnCO">COORD
 		<i class="fa fa-caret-down"></i>
 	</button>
-	<div class="dropdown-containerCO">
-		<a class= "ind" href="#">MCC COORD</a>
-		<a class= "ind" href="#">ST COORD</a>
-	</div>
+		<button class= "ind" id="MCC">MCC COORD</button>
+		<button class= "ind" id="ST">ST COORD</button>
+<button class="dropdown-btn">Other Filters
+    <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    <button class= "ind" id="comm">Comm/Latency</button>
+    <button class= "ind" id="day">DAY/NIGHT</button>
+    <button class= "ind" id="earthR">Earth Receive</button>
+	<button class= "ind" id="earthT">Earth Transmit</button>
+	<button class= "ind" id="marsTAR">Mars Transmit and Receive</button>
+	<button class= "ind" id="CDR">CDR</button>
+	<button class= "ind" id="commE">Comm Exceptions</button>
 </div>
 <!-- <a href="#">Messages</a> -->
 </div>
@@ -102,65 +84,66 @@ function checkTime(i) {
 <script id='eventTemp' type='text/x-handlebars-template'>
 	
 	{{#each activities}}
-		<div class = "event" style = 'background: #{{customColor}}'>
-		<h3>{{id}} : {{name}} : {{@index}}</h3>
-		<h3>Start: {{start}} || End: {{end}}</h3>
-		<h3>{{{executionNote}}}</h3>
-		<h3>{{sequence}}</h3>
-		<h3>{{{opsNote}}}</h3>
-		<h3>isTask: {{isTask}}, timeCritical: {{timeCritical}}, editable: {{editable}}, flexible: {{flexible}}, {{#if unscheduled}} unscheduled: {{unscheduled}} {{/if}}</h3>
-		<p> Rows </p>
+		<div class = "event" id="{{id}}">
+		<h3 class="front">{{id}} : {{name}} : {{@index}}<div id="color" style='background: #{{customColor}}'><p></br></br></p></div></h3>
+		<h3 class="front">Start: {{start}} || End: {{end}}</h3>
+		<h3 class="front">{{{executionNote}}}</h3>
+		<h3 class="front">{{sequence}}</h3>
+		<h3 class="front">{{{opsNote}}}</h3>
+		<h3 class="front">isTask: {{isTask}}, timeCritical: {{timeCritical}}, editable: {{editable}}, flexible: {{flexible}}, {{#if unscheduled}} unscheduled: {{unscheduled}} {{/if}}</h3>
+		<p class="front"> Rows </p>
 		<ol>
 		{{#each rows}}
-			<li>{{this}}</li>
+			<li class="front">{{this}}</li>
 		{{/each}}
 		</ol>
 		
 		{{#if requiredConditions}}
-		<p>Required Conditions</p>
+		<p class="front">Required Conditions</p>
 		<ol>
 		{{#each requiredConditions}}
-			<li>{{this}}</li>
+			<li class="front">{{this}}</li>
 		{{/each}}
 		</ol>
 		{{/if}}
 		
 		{{#if procedures}}
-		<p>Procedures</p>
+		<p class="front">Procedures</p>
 		<ol>
 		{{#each procedures}}
-			<li>{{this}}</li>
+			<li class="front">{{this}}</li>
 		{{/each}}
 		</ol>
 		{{/if}}
 		
 		{{#if groups}}
-		<p>Groups</p>
+		<p class="front">Groups</p>
 		<ol>
 		{{#each groups}}
-			<li>{{this}}</li>
+			<li class="front">{{this}}</li>
 		{{/each}}
 		</ol>
 		{{/if}}
 		
 		{{#if timeOfDayConstraints}}
-		<h3>Time Constraints</h3>
+		<h3 class="front">Time Constraints</h3>
 		{{#if timeOfDayConstraints.noStartBefore}}
-		<p>Start after:{{timeOfDayConstraints.noStartBefore}}</p>
+		<p class="front">Start after:{{timeOfDayConstraints.noStartBefore}}</p>
 		{{/if}}
 		{{#if timeOfDayConstraints.endBy}}
-		<p>End by:{{timeOfDayConstraints.endBy}}</p>
+		<p class="front">End by:{{timeOfDayConstraints.endBy}}</p>
 		{{/if}}
 		{{/if}}
-		
-		</div>
 		<hr>
+		</div>
+		
 	{{/each}}
 	
   </script>
-  
-  <script src="js/handlebars-v4.0.12.js"></script>
-  <script src="js/timeline.js"></script>
+
+<script src="js/handlebars-v4.0.12.js"></script>
+<script src="js/timeline.js"></script>
+
 </section>
 </body>
 </html>

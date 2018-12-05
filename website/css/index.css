@@ -36,6 +36,19 @@ header {
 	display: none;
 }
 
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 50px;
+	z-index: 1;
+	border: 2px black solid;
+}
+
+
+
 .sidenav {
   background-color: gray;
   border-right: 2px solid black;
@@ -48,7 +61,7 @@ header {
   z-index: 1;
 }
 
-.sidenav a {
+.sidenav button, .sidenav a {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 1.8% 2.1% 1.8% 5%;
@@ -80,13 +93,13 @@ header {
   outline-style: none;
 }
 
-.sidenav a.ind {
+.sidenav button.ind {
   background-color: lightgray;
   padding-left: 10%;
   font-size: 110%;
 }
 
-.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
   color: red;
 }
 
@@ -102,6 +115,11 @@ header {
 .fa-caret-down {
   float: right;
   padding-right: 2%;
+}
+
+.front {
+	position: relative;
+	z-index: 4;
 }
 
 /*
