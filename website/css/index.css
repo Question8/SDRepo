@@ -36,10 +36,6 @@ header {
 	overflow-x: hidden;
 }
 
-#second {
-	display: none;
-}
-
 #color {
 	display: block;
 	position: relative;
