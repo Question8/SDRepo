@@ -242,6 +242,7 @@ header {
   text-align: left;
 }
 
+
 .sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
   color: red;
 }
@@ -388,7 +389,11 @@ header {
   text-align: left;
 }
 
+<<<<<<< HEAD
 .sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
+=======
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+>>>>>>> b962fa898fe509140ba0b6828e21bf1f531def4c
   color: red;
 }
 
@@ -534,7 +539,11 @@ header {
   text-align: left;
 }
 
+<<<<<<< HEAD
 .sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
+=======
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+>>>>>>> b962fa898fe509140ba0b6828e21bf1f531def4c
   color: red;
 }
 
@@ -680,7 +689,11 @@ header {
   text-align: left;
 }
 
+<<<<<<< HEAD
 .sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
+=======
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+>>>>>>> b962fa898fe509140ba0b6828e21bf1f531def4c
   color: red;
 }
 
