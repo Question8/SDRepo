@@ -15,6 +15,7 @@ var btnTech1 = document.getElementById("TECH1");
 var btnTech2 = document.getElementById("TECH2");
 var btnMCC = document.getElementById("MCC");
 var btnST = document.getElementById("ST");
+var btnAll = document.getElementById("all");
 
 var fileData;
 
@@ -25,6 +26,7 @@ fetch ('https://cors-anywhere.herokuapp.com/http://gw2.mvctc.com/Class2019/plan.
 		
 		renderEvents(fileData);
 		
+		btnAll.onclick = function(){sortEvents(fileData, "All")};
 		btnFE1.onclick = function(){sortEvents(fileData, "FE1")};
 		btnFE2.onclick = function(){sortEvents(fileData, "FE2")};
 		btnFE3.onclick = function(){sortEvents(fileData, "FE3")};
@@ -62,6 +64,10 @@ function sortEvents(file, sorter) {
 		id = document.getElementById(file.activities[i].id);
 		for(var j = 0; j < rows.length; j++){
 			if(rows[j] == sorter){
+				id.style.display = "block";
+				break;
+			}
+			else if(sorter == "All"){
 				id.style.display = "block";
 				break;
 			}

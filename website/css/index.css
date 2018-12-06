@@ -1,8 +1,19 @@
 @charset "utf-8";
 
-@media only screen and (min-device-height: 900px) {
+@media all and (device-width: 1440px) and (device-height: 900px) {
 
 html {
+}
+
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 50px;
+	z-index: 1;
+	border: 2px black solid;
 }
 
 header {
@@ -36,18 +47,9 @@ header {
 	overflow-x: hidden;
 }
 
-#color {
-	display: block;
-	position: relative;
-	width: 50px;
-	height: 50px;
-	float: right;
-	right: 50px;
-	z-index: 1;
-	border: 2px black solid;
+#second {
+	display: none;
 }
-
-
 
 .sidenav {
   background-color: gray;
@@ -77,7 +79,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 1.8% 2.1% 1.8% 5%;
@@ -99,7 +101,7 @@ header {
   font-size: 110%;
 }
 
-.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll {
   color: red;
 }
 
@@ -108,7 +110,7 @@ header {
   color: black;
 }
 
-.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO, .dropdown-btnAll {
   background-color: lightblue;
 }
 
@@ -117,16 +119,6 @@ header {
   padding-right: 2%;
 }
 
-.front {
-	position: relative;
-	z-index: 4;
-}
-
-/*
-#sidenav {
-	background: lightblue;
-	border-right: 2px solid black;
-=======
 #footer {
 	background-color: #B2B2B2;
     position: absolute;
@@ -140,10 +132,15 @@ header {
 #footer > p {
 	font-size: 155%;
 }
+
+.front {
+	position: relative;
+	z-index: 4;
+}
 }
 
 /*Ipad pro portrait*/
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation:portrait) {
 	
 	header {
 	background-color: #B2B2B2;
@@ -156,16 +153,28 @@ header {
 	z-index: 2;
 }
 
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 50px;
+	z-index: 1;
+	border: 2px black solid;
+}
+
 #txt {
 	position: relative;
 	width: 100%;
 	line-height: 500%;
 	font-size: 50px;
+	word-wrap: break-word;
 }
 
 #main {
 	background-color: beige;
-	padding-left: .3%;
+	padding-left: .5%;
 	position: absolute;
 	height: 79.7%;
 	bottom: 10.3%;
@@ -194,7 +203,7 @@ header {
   z-index: 1;
 }
 
-.sidenav a {
+.sidenav button, .sidenav a {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -210,7 +219,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -226,14 +235,14 @@ header {
   outline-style: none;
 }
 
-.sidenav a.ind {
+.sidenav button.ind {
   background-color: lightgray;
   #padding-left: 10%;
   font-size: 150%;
   text-align: left;
 }
 
-.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
   color: red;
 }
 
@@ -242,7 +251,7 @@ header {
   color: black;
 }
 
-.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO, .dropdown-btnAll {
   background-color: lightblue;
 }
 
@@ -267,11 +276,17 @@ header {
 	#line-height: 250%;
 	font-size: 45px;
 }
+
+.front {
+	position: relative;
+	z-index: 4;
+}
+
 	
 }
 
 /*Ipad pro landscape*/
-@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape) {
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape) {
 	
 header {
 	background-color: #B2B2B2;
@@ -284,16 +299,28 @@ header {
 	z-index: 2;
 }
 
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 50px;
+	z-index: 1;
+	border: 2px black solid;
+}
+
 #txt {
 	position: relative;
 	width: 100%;
 	line-height: 200%;
 	font-size: 50px;
+	word-wrap: break-word;
 }
 
 #main {
 	background-color: beige;
-	padding-left: .3%;
+	padding-left: .5%;
 	position: absolute;
 	height: 79.7%;
 	bottom: 10.3%;
@@ -322,7 +349,7 @@ header {
   z-index: 1;
 }
 
-.sidenav a {
+.sidenav button, .sidenav a {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -338,7 +365,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -354,14 +381,14 @@ header {
   outline-style: none;
 }
 
-.sidenav a.ind {
+.sidenav button.ind {
   background-color: lightgray;
   #padding-left: 10%;
   font-size: 150%;
   text-align: left;
 }
 
-.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
   color: red;
 }
 
@@ -370,7 +397,7 @@ header {
   color: black;
 }
 
-.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO, .dropdown-btnAll {
   background-color: lightblue;
 }
 
@@ -396,10 +423,15 @@ header {
 	font-size: 45px;
 }
 
+.front {
+	position: relative;
+	z-index: 4;
+}
+
 }
 
 /*Ipad portrait*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation:portrait) {
 	
 	header {
 	background-color: #B2B2B2;
@@ -412,16 +444,29 @@ header {
 	z-index: 2;
 }
 
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 10px;
+	top: 5px;
+	z-index: 1;
+	border: 2px black solid;
+}
+
 #txt {
 	position: relative;
 	width: 100%;
 	line-height: 200%;
 	font-size: 50px;
+	word-wrap: break-word;
 }
 
 #main {
 	background-color: beige;
-	padding-left: .3%;
+	padding-left: .5%;
 	position: absolute;
 	height: 79.7%;
 	bottom: 10.3%;
@@ -450,7 +495,7 @@ header {
   z-index: 1;
 }
 
-.sidenav a {
+.sidenav button, .sidenav a {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -466,7 +511,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -482,14 +527,14 @@ header {
   outline-style: none;
 }
 
-.sidenav a.ind {
+.sidenav button.ind {
   background-color: lightgray;
   #padding-left: 10%;
   font-size: 150%;
   text-align: left;
 }
 
-.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
   color: red;
 }
 
@@ -498,7 +543,7 @@ header {
   color: black;
 }
 
-.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO, .dropdown-btnAll {
   background-color: lightblue;
 }
 
@@ -523,11 +568,16 @@ header {
 	#line-height: 250%;
 	font-size: 35px;
 }
+
+.front {
+	position: relative;
+	z-index: 4;
+}
 	
 }
 
 /*Ipad landscape*/
-@media only screen and (min-device-width: 1024px) and (max-device-height: 768px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation:landscape) {
 	
 header {
 	background-color: #B2B2B2;
@@ -540,16 +590,29 @@ header {
 	z-index: 2;
 }
 
+#color {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 50px;
+	top: 5px;
+	z-index: 1;
+	border: 2px black solid;
+}
+
 #txt {
 	position: relative;
 	width: 100%;
 	line-height: 150%;
 	font-size: 50px;
+	word-wrap: break-word;
 }
 
 #main {
 	background-color: beige;
-	padding-left: .3%;
+	padding-left: .5%;
 	position: absolute;
 	height: 79.7%;
 	bottom: 10.3%;
@@ -578,7 +641,7 @@ header {
   z-index: 1;
 }
 
-.sidenav a {
+.sidenav button, .sidenav a {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -594,7 +657,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
   font-family: "Times New Roman", Times, serif;
   padding: 20% 0% 20% 0%;
@@ -610,14 +673,14 @@ header {
   outline-style: none;
 }
 
-.sidenav a.ind {
+.sidenav button.ind {
   background-color: lightgray;
   #padding-left: 10%;
   font-size: 150%;
   text-align: left;
 }
 
-.sidenav a:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
   color: red;
 }
 
@@ -626,7 +689,7 @@ header {
   color: black;
 }
 
-.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO, .dropdown-btnAll {
   background-color: lightblue;
 }
 
@@ -650,6 +713,11 @@ header {
 	width: 100%;
 	line-height: 10%;
 	font-size: 35px;
+}
+
+.front {
+	position: relative;
+	z-index: 4;
 }
 
 }
