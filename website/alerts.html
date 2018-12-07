@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NASA Hunch">
+<meta name="author" content="Daniel Logan">
+<title>NASA</title>
+
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".dropdown-container").hide();
+		$(".dropdown-btn").click(function(){
+			$(".dropdown-container").slideToggle("slow");
+		});
+	});
+</script>
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getUTCHours();
+    var m = today.getUTCMinutes();
+    var s = today.getUTCSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s + " UTC";
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+<style type="text/css">
+
+#jsalarmclock{
+font-family: Tahoma;
+font-weight: bold;
+font-size: 12px;
+}
+
+#jsalarmclock div{
+margin-bottom: 0.8em;
+}
+
+#jsalarmclock div.leftcolumn{
+float: left;
+width: 150px;
+font-size: 13px;
+background-color: lightyellow;
+clear: left;
+}
+
+#jsalarmclock span{
+margin-right: 5px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+
+* JavaScript Alarm Clock- by JavaScript Kit (www.javascriptkit.com)
+* This notice must stay intact for usage
+* Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and 100s more
+
+***********************************************/
+
+var jsalarm={
+	padfield:function(f){
+		return (f<10)? "0"+f : f
+	},
+	showcurrenttime:function(){
+		var dateobj=new Date()
+		var ct=this.padfield(dateobj.getUTCHours())+":"+this.padfield(dateobj.getUTCMinutes())+":"+this.padfield(dateobj.getUTCSeconds())
+		this.ctref.innerHTML=ct
+		this.ctref.setAttribute("title", ct)
+		if (typeof this.hourwake!="undefined"){ //if alarm is set
+			if (this.ctref.title==(this.hourwake+":"+this.minutewake+":"+this.secondwake)){
+				clearInterval(jsalarm.timer)
+				//window.location=document.getElementById("musicloc").value
+				alert(document.getElementById("musicloc").value);
+			}
+		}
+	},
+	init:function(){
+		var dateobj=new Date()
+		this.ctref=document.getElementById("jsalarm_ct")
+		this.submitref=document.getElementById("submitbutton")
+		this.submitref.onclick=function(){
+			jsalarm.setalarm()
+			this.value="Alarm Set"
+			this.disabled=true
+			return false
+		}
+		this.resetref=document.getElementById("resetbutton")
+		this.resetref.onclick=function(){
+		jsalarm.submitref.disabled=false
+		jsalarm.hourwake=undefined
+		jsalarm.hourselect.disabled=false
+		jsalarm.minuteselect.disabled=false
+		jsalarm.secondselect.disabled=false
+		return false
+		}
+		var selections=document.getElementsByTagName("select")
+		this.hourselect=selections[0]
+		this.minuteselect=selections[1]
+		this.secondselect=selections[2]
+		for (var i=0; i<60; i++){
+			if (i<24) //If still within range of hours field: 0-23
+			this.hourselect[i]=new Option(this.padfield(i), this.padfield(i), false, dateobj.getUTCHours()==i)
+			this.minuteselect[i]=new Option(this.padfield(i), this.padfield(i), false, dateobj.getUTCMinutes()==i)
+			this.secondselect[i]=new Option(this.padfield(i), this.padfield(i), false, dateobj.getUTCSeconds()==i)
+
+		}
+		jsalarm.showcurrenttime()
+		jsalarm.timer=setInterval(function(){jsalarm.showcurrenttime()}, 1000)
+	},
+	setalarm:function(){
+		this.hourwake=this.hourselect.options[this.hourselect.selectedIndex].value
+		this.minutewake=this.minuteselect.options[this.minuteselect.selectedIndex].value
+		this.secondwake=this.secondselect.options[this.secondselect.selectedIndex].value
+		this.hourselect.disabled=true
+		this.minuteselect.disabled=true
+		this.secondselect.disabled=true
+	}
+}
+
+</script>
+
+</head>
+<body onload="startTime()">
+<header>
+<div id="txt"></div>
+</header>
+<nav>
+</nav>
+<section>
+<div class="sidenav">
+<a href="alerts.html">Alerts</a>
+<button class="dropdown-btnAll" id="all">All Tasks
+		<i class="fa fa-caret-down"></i>
+	</button>
+<button class="dropdown-btnFE">FE
+		<i class="fa fa-caret-down"></i>
+	</button>
+		<button class= "ind" id="FE1" >FE-1</button>
+		<button class= "ind" id="FE2">FE-2</button>
+		<button class= "ind" id="FE3">FE-3</button>
+	<button class="dropdown-btnTE">TECH
+		<i class="fa fa-caret-down"></i>
+	</button>
+		<button class= "ind" id="TECH1">TECH-1</button>
+		<button class= "ind" id="TECH2">TECH-2</button>
+	<button class="dropdown-btnCO">COORD
+		<i class="fa fa-caret-down"></i>
+	</button>
+		<button class= "ind" id="MCC">MCC COORD</button>
+		<button class= "ind" id="ST">ST COORD</button>
+<button class="dropdown-btn">Other Filters
+    <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    <button class= "ind" id="comm">Comm/Latency</button>
+    <button class= "ind" id="day">DAY/NIGHT</button>
+    <button class= "ind" id="earthR">Earth Receive</button>
+	<button class= "ind" id="earthT">Earth Transmit</button>
+	<button class= "ind" id="marsTAR">Mars Transmit and Receive</button>
+	<button class= "ind" id="CDR">CDR</button>
+	<button class= "ind" id="commE">Comm Exceptions</button>
+</div>
+<!-- <a href="#">Messages</a> -->
+</div>
+<div id="main">
+<form action="" method="">
+<div id="jsalarmclock">
+<div><div class="leftcolumn">Current Time:</div> <span id="jsalarm_ct" style="letter-spacing: 2px"></span></div>
+<div><div class="leftcolumn">Set Alarm:</div> <span><select></select> Hour</span> <span><select></select> Minutes</span> <span><select></select> Seconds</span></div>
+<div><div class="leftcolumn">Set Alarm Action:</div> <input type="text" id="musicloc" size="55" value="" /></div>
+<input type="submit" value="Set Alarm!" id="submitbutton" /> <input type="reset" value="reset" id="resetbutton" />
+</div>
+</form>
+
+
+<script type="text/javascript">
+
+jsalarm.init()
+
+</script>
+</div>
+<div id="footer">
+<p>&copy 2018 SPACE DUCKS, NASA HUNCH</p>
+</div>
+<script id='eventTemp' type='text/x-handlebars-template'>
+	
+	{{#each activities}}
+		<div class = "event" id="{{id}}">
+		<h3 class="front">{{id}} : {{name}} : {{@index}}<div id="color" style='background: #{{customColor}}'><p></br></br></p></div></h3>
+		<h3 class="front">Start: {{start}} || End: {{end}}</h3>
+		<h3 class="front">{{{executionNote}}}</h3>
+		<h3 class="front">{{sequence}}</h3>
+		<h3 class="front">{{{opsNote}}}</h3>
+		<h3 class="front">isTask: {{isTask}}, timeCritical: {{timeCritical}}, editable: {{editable}}, flexible: {{flexible}}, {{#if unscheduled}} unscheduled: {{unscheduled}} {{/if}}</h3>
+		<p class="front"> Rows </p>
+		<ol>
+		{{#each rows}}
+			<li class="front">{{this}}</li>
+		{{/each}}
+		</ol>
+		
+		{{#if requiredConditions}}
+		<p class="front">Required Conditions</p>
+		<ol>
+		{{#each requiredConditions}}
+			<li class="front">{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if procedures}}
+		<p class="front">Procedures</p>
+		<ol>
+		{{#each procedures}}
+			<li class="front">{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if groups}}
+		<p class="front">Groups</p>
+		<ol>
+		{{#each groups}}
+			<li class="front">{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if timeOfDayConstraints}}
+		<h3 class="front">Time Constraints</h3>
+		{{#if timeOfDayConstraints.noStartBefore}}
+		<p class="front">Start after:{{timeOfDayConstraints.noStartBefore}}</p>
+		{{/if}}
+		{{#if timeOfDayConstraints.endBy}}
+		<p class="front">End by:{{timeOfDayConstraints.endBy}}</p>
+		{{/if}}
+		{{/if}}
+		<hr>
+		</div>
+		
+	{{/each}}
+	
+  </script>
+
+<script src="js/handlebars-v4.0.12.js"></script>
+<!--<script src="js/timeline.js"></script>-->
+
+</section>
+</body>
+</html>

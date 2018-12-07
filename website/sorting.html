@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NASA Hunch">
+<meta name="author" content="Daniel Logan">
+<title>NASA</title>
+
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".dropdown-container").hide();
+		$(".dropdown-btn").click(function(){
+			$(".dropdown-container").slideToggle("slow");
+		});
+	});
+</script>
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getUTCHours();
+    var m = today.getUTCMinutes();
+    var s = today.getUTCSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s + " UTC";
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+</head>
+<body onload="startTime()">
+<header>
+<div id="txt"></div>
+</header>
+<nav>
+</nav>
+<section>
+<div class="sidenav">
+<a href="#">Alerts</a>
+<button class="dropdown-btnAll" id="all">All Tasks
+		<i class="fa fa-caret-down"></i>
+	</button>
+<button class="dropdown-btnFE">FE
+		<i class="fa fa-caret-down"></i>
+	</button>
+		<button class= "ind" id="FE1" >FE-1</button>
+		<button class= "ind" id="FE2">FE-2</button>
+		<button class= "ind" id="FE3">FE-3</button>
+	<button class="dropdown-btnTE">TECH
+		<i class="fa fa-caret-down"></i>
+	</button>
+		<button class= "ind" id="TECH1">TECH-1</button>
+		<button class= "ind" id="TECH2">TECH-2</button>
+	<button class="dropdown-btnCO">COORD
+		<i class="fa fa-caret-down"></i>
+	</button>
+		<button class= "ind" id="MCC">MCC COORD</button>
+		<button class= "ind" id="ST">ST COORD</button>
+<button class="dropdown-btn">Other Filters
+    <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    <button class= "ind" id="comm">Comm/Latency</button>
+    <button class= "ind" id="day">DAY/NIGHT</button>
+    <button class= "ind" id="earthR">Earth Receive</button>
+	<button class= "ind" id="earthT">Earth Transmit</button>
+	<button class= "ind" id="marsTAR">Mars Transmit and Receive</button>
+	<button class= "ind" id="CDR">CDR</button>
+	<button class= "ind" id="commE">Comm Exceptions</button>
+</div>
+<!-- <a href="#">Messages</a> -->
+</div>
+<div id="main">
+</div>
+<div id="footer">
+<p>&copy 2018 SPACE DUCKS, NASA HUNCH</p>
+</div>
+<script id='eventTemp' type='text/x-handlebars-template'>
+	
+	{{#each activities}}
+		<div class = "event" id="{{id}}">
+		<h3 class="front">{{id}} : {{name}} : {{@index}}<div id="color" style='background: #{{customColor}}'><p></br></br></p></div></h3>
+		<h3 class="front">Start: {{convertTime start}} || End: {{convertTime end}}</h3>
+		<h3 class="front">{{{executionNote}}}</h3>
+		<h3 class="front">{{sequence}}</h3>
+		<h3 class="front">{{{opsNote}}}</h3>
+		<h3 class="front">isTask: {{isTask}}, timeCritical: {{timeCritical}}, editable: {{editable}}, flexible: {{flexible}}, {{#if unscheduled}} unscheduled: {{unscheduled}} {{/if}}</h3>
+		<p class="front"> Rows </p>
+		<ol>
+		{{#each rows}}
+			<li class="front">{{this}}</li>
+		{{/each}}
+		</ol>
+		
+		{{#if requiredConditions}}
+		<p class="front">Required Conditions</p>
+		<ol>
+		{{#each requiredConditions}}
+			<li class="front">{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if procedures}}
+		<p class="front">Procedures</p>
+		<ol>
+		{{#each procedures}}
+			<li class="front">{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if groups}}
+		<p class="front">Groups</p>
+		<ol>
+		{{#each groups}}
+			<li class="front">{{this}}</li>
+		{{/each}}
+		</ol>
+		{{/if}}
+		
+		{{#if timeOfDayConstraints}}
+		<h3 class="front">Time Constraints</h3>
+		{{#if timeOfDayConstraints.noStartBefore}}
+		<p class="front">Start after:{{timeOfDayConstraints.noStartBefore}}</p>
+		{{/if}}
+		{{#if timeOfDayConstraints.endBy}}
+		<p class="front">End by:{{timeOfDayConstraints.endBy}}</p>
+		{{/if}}
+		{{/if}}
+		<hr>
+		</div>
+		
+	{{/each}}
+	
+  </script>
+
+<script src="js/handlebars-v4.0.12.js"></script>
+<script src="js/timeline.js"></script>
+
+</section>
+</body>
+</html>
