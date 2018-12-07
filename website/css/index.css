@@ -81,7 +81,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
   font-family: sans-serif;
   padding: 1.8% 2.1% 1.8% 5%;
@@ -103,7 +103,7 @@ header {
   font-size: 110%;
 }
 
-.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll {
   color: red;
 }
 
@@ -112,7 +112,7 @@ header {
   color: black;
 }
 
-.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO, .dropdown-btnAll {
   background-color: lightblue;
 }
 
@@ -227,7 +227,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
   font-family: sans-serif;
   padding: 20% 0% 20% 0%;
@@ -250,7 +250,8 @@ header {
   text-align: left;
 }
 
-.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
   color: red;
 }
 
@@ -259,7 +260,7 @@ header {
   color: black;
 }
 
-.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO, .dropdown-btnAll {
   background-color: lightblue;
 }
 
@@ -376,7 +377,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
   font-family: sans-serif;
   padding: 20% 0% 20% 0%;
@@ -399,7 +400,11 @@ header {
   text-align: left;
 }
 
+<<<<<<< HEAD
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
+=======
 .sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+>>>>>>> b962fa898fe509140ba0b6828e21bf1f531def4c
   color: red;
 }
 
@@ -408,7 +413,7 @@ header {
   color: black;
 }
 
-.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO, .dropdown-btnAll {
   background-color: lightblue;
 }
 
@@ -525,7 +530,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
   font-family: sans-serif;
   padding: 20% 0% 20% 0%;
@@ -548,7 +553,11 @@ header {
   text-align: left;
 }
 
+<<<<<<< HEAD
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
+=======
 .sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+>>>>>>> b962fa898fe509140ba0b6828e21bf1f531def4c
   color: red;
 }
 
@@ -557,7 +566,7 @@ header {
   color: black;
 }
 
-.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO, .dropdown-btnAll {
   background-color: lightblue;
 }
 
@@ -674,7 +683,7 @@ header {
   outline-style: none;
 }
 
-.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO {
+.dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
   font-family: sans-serif;
   padding: 20% 0% 20% 0%;
@@ -697,7 +706,11 @@ header {
   text-align: left;
 }
 
+<<<<<<< HEAD
+.sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover, .dropdown-btnAll:hover {
+=======
 .sidenav button:hover, .dropdown-btn:hover, .dropdown-btnFE:hover, .dropdown-btnTE:hover, .dropdown-btnCO:hover {
+>>>>>>> b962fa898fe509140ba0b6828e21bf1f531def4c
   color: red;
 }
 
@@ -706,7 +719,7 @@ header {
   color: black;
 }
 
-.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO {
+.dropdown-container, .dropdown-containerFE, .dropdown-containerTE, .dropdown-containerCO, .dropdown-btnAll {
   background-color: lightblue;
 }
 
