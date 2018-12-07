@@ -39,8 +39,8 @@ header {
 	background-color: beige;
 	padding-left: .3%;
 	position: absolute;
-	height: 79.7%;
-	bottom: 10.3%;
+	height: 90%;
+	bottom: 0;
 	right: 0;
 	left: 25%;
 	width: -100%;
@@ -57,8 +57,8 @@ header {
   background-color: gray;
   border-right: 2px solid black;
   position: absolute;
-  height: 79.7%;
-  bottom: 10.3%;
+  height: 90%;
+  bottom: 0;
   width: 25%;
   left: 0;
   overflow-x: hidden;
@@ -183,8 +183,8 @@ header {
 	background-color: beige;
 	padding-left: .5%;
 	position: absolute;
-	height: 79.7%;
-	bottom: 10.3%;
+	height: 90%;
+	bottom: 0%;
 	right: 0;
 	left: 25%;
 	width: -100%;
@@ -333,8 +333,8 @@ header {
 	background-color: beige;
 	padding-left: .5%;
 	position: absolute;
-	height: 79.7%;
-	bottom: 10.3%;
+	height: 90%;
+	bottom: 0;
 	right: 0;
 	left: 25%;
 	width: -100%;
@@ -486,8 +486,8 @@ header {
 	background-color: beige;
 	padding-left: .5%;
 	position: absolute;
-	height: 79.7%;
-	bottom: 10.3%;
+	height: 90%;
+	bottom: 0;
 	right: 0;
 	left: 25%;
 	width: -100%;
@@ -639,8 +639,8 @@ header {
 	background-color: beige;
 	padding-left: .5%;
 	position: absolute;
-	height: 79.7%;
-	bottom: 10.3%;
+	height: 90%;
+	bottom: 0;
 	right: 0;
 	left: 25%;
 	width: -100%;
