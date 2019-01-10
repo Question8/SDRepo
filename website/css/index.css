@@ -25,6 +25,7 @@ header {
 	width: 100%;
 	text-align: center;
 	z-index: 2;
+	font-family: sans-serif;
 }
 
 #txt {
@@ -38,13 +39,14 @@ header {
 	background-color: beige;
 	padding-left: .3%;
 	position: absolute;
-	height: 79.7%;
-	bottom: 10.3%;
+	height: 90%;
+	bottom: 0;
 	right: 0;
 	left: 25%;
 	width: -100%;
 	overflow-y: auto;
 	overflow-x: hidden;
+	font-family: sans-serif;
 }
 
 #second {
@@ -55,8 +57,8 @@ header {
   background-color: gray;
   border-right: 2px solid black;
   position: absolute;
-  height: 79.7%;
-  bottom: 10.3%;
+  height: 90%;
+  bottom: 0;
   width: 25%;
   left: 0;
   overflow-x: hidden;
@@ -65,7 +67,7 @@ header {
 
 .sidenav button, .sidenav a {
   border-style: initial;
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   padding: 1.8% 2.1% 1.8% 5%;
   text-decoration: none;
   font-size: 120%;
@@ -81,7 +83,7 @@ header {
 
 .dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   padding: 1.8% 2.1% 1.8% 5%;
   text-decoration: none;
   font-size: 120%;
@@ -127,6 +129,7 @@ header {
     bottom: 0;
     width: 100%;
     text-align: center;
+	font-family: sans-serif;
 }
 
 #footer > p {
@@ -137,6 +140,9 @@ header {
 	position: relative;
 	z-index: 4;
 }
+
+
+
 }
 
 /*Ipad pro portrait*/
@@ -151,6 +157,7 @@ header {
 	width: 100%;
 	text-align: center;
 	z-index: 2;
+	font-family: sans-serif;
 }
 
 #color {
@@ -176,8 +183,8 @@ header {
 	background-color: beige;
 	padding-left: .5%;
 	position: absolute;
-	height: 79.7%;
-	bottom: 10.3%;
+	height: 90%;
+	bottom: 0%;
 	right: 0;
 	left: 25%;
 	width: -100%;
@@ -185,6 +192,7 @@ header {
 	overflow-x: hidden;
 	word-wrap: break-word;
 	font-size: 25px;
+	font-family: sans-serif;
 }
 
 #second {
@@ -205,7 +213,7 @@ header {
 
 .sidenav button, .sidenav a {
   border-style: initial;
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   padding: 20% 0% 20% 0%;
   text-decoration: none;
   font-size: 180%;
@@ -221,7 +229,7 @@ header {
 
 .dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   padding: 20% 0% 20% 0%;
   text-decoration: none;
   font-size: 180%;
@@ -269,6 +277,7 @@ header {
     bottom: 0;
     width: 100%;
     text-align: center;
+	font-family: sans-serif;
 }
 
 #footer > p {
@@ -298,6 +307,7 @@ header {
 	width: 100%;
 	text-align: center;
 	z-index: 2;
+	font-family: sans-serif;
 }
 
 #color {
@@ -323,8 +333,8 @@ header {
 	background-color: beige;
 	padding-left: .5%;
 	position: absolute;
-	height: 79.7%;
-	bottom: 10.3%;
+	height: 90%;
+	bottom: 0;
 	right: 0;
 	left: 25%;
 	width: -100%;
@@ -332,6 +342,7 @@ header {
 	overflow-x: hidden;
 	word-wrap: break-word;
 	font-size: 25px;
+	font-family: sans-serif;
 }
 
 #second {
@@ -352,7 +363,7 @@ header {
 
 .sidenav button, .sidenav a {
   border-style: initial;
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   padding: 20% 0% 20% 0%;
   text-decoration: none;
   font-size: 180%;
@@ -368,7 +379,7 @@ header {
 
 .dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   padding: 20% 0% 20% 0%;
   text-decoration: none;
   font-size: 180%;
@@ -415,6 +426,7 @@ header {
     bottom: 0;
     width: 100%;
     text-align: center;
+	font-family: sans-serif;
 }
 
 #footer > p {
@@ -443,6 +455,7 @@ header {
 	width: 100%;
 	text-align: center;
 	z-index: 2;
+	font-family: sans-serif;
 }
 
 #color {
@@ -469,8 +482,8 @@ header {
 	background-color: beige;
 	padding-left: .5%;
 	position: absolute;
-	height: 79.7%;
-	bottom: 10.3%;
+	height: 90%;
+	bottom: 0;
 	right: 0;
 	left: 25%;
 	width: -100%;
@@ -478,6 +491,7 @@ header {
 	overflow-x: hidden;
 	word-wrap: break-word;
 	font-size: 25px;
+	font-family: sans-serif;
 }
 
 #second {
@@ -498,7 +512,7 @@ header {
 
 .sidenav button, .sidenav a {
   border-style: initial;
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   padding: 20% 0% 20% 0%;
   text-decoration: none;
   font-size: 180%;
@@ -514,7 +528,7 @@ header {
 
 .dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   padding: 20% 0% 20% 0%;
   text-decoration: none;
   font-size: 180%;
@@ -561,6 +575,7 @@ header {
     bottom: 0;
     width: 100%;
     text-align: center;
+	font-family: sans-serif;
 }
 
 #footer > p {
@@ -589,6 +604,7 @@ header {
 	width: 100%;
 	text-align: center;
 	z-index: 2;
+	font-family: sans-serif;
 }
 
 #color {
@@ -615,8 +631,8 @@ header {
 	background-color: beige;
 	padding-left: .5%;
 	position: absolute;
-	height: 79.7%;
-	bottom: 10.3%;
+	height: 90%;
+	bottom: 0;
 	right: 0;
 	left: 25%;
 	width: -100%;
@@ -624,6 +640,7 @@ header {
 	overflow-x: hidden;
 	word-wrap: break-word;
 	font-size: 25px;
+	font-family: sans-serif;
 }
 
 #second {
@@ -644,7 +661,7 @@ header {
 
 .sidenav button, .sidenav a {
   border-style: initial;
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   padding: 20% 0% 20% 0%;
   text-decoration: none;
   font-size: 180%;
@@ -660,7 +677,7 @@ header {
 
 .dropdown-btn, .dropdown-btnFE, .dropdown-btnTE, .dropdown-btnCO, .dropdown-btnAll {
   border-style: initial;
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   padding: 20% 0% 20% 0%;
   text-decoration: none;
   font-size: 180%;
@@ -707,6 +724,7 @@ header {
     bottom: 0;
     width: 100%;
     text-align: center;
+	font-family: sans-serif;
 }
 
 #footer > p {
